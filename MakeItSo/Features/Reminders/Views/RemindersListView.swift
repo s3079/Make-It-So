@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct RemindersListView: View {
     @State
     private var reminders = Reminder.samples
     @State
@@ -57,7 +57,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            ContentView()
+            RemindersListView()
                 .navigationTitle("Reminders")
         }
     }
