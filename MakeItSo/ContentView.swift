@@ -7,18 +7,32 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+  @State
+  private var reminders = Reminder.samples
+
+
+  var body: some View {
+      List($reminders) { $reminder in
+      HStack {
+          Image(systemName: reminder.isCompleted
+                        ? "largecircle.fill.circle"
+                        : "circle")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                    .onTapGesture {
+                                reminder.isCompleted.toggle()
+                              }
+                  Text(reminder.title)
+      }
     }
+  }
 }
 
-#Preview {
+
+struct ContentView_Previews: PreviewProvider {
+  static var previews: some View {
     ContentView()
+  }
 }
