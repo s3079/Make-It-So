@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct AddReminderView: View {
+struct EditReminderDetailsView: View {
     
     enum FocusableField: Hashable {
         case title
@@ -63,7 +63,7 @@ struct AddReminderView: View {
 
 struct AddReminderView_Previews: PreviewProvider {
     static var previews: some View {
-        AddReminderView {
+        EditReminderDetailsView {
             reminder in
             print("You addes a new reminder: \(reminder.title)")
         }
