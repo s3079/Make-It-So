@@ -6,13 +6,21 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
-
-struct Reminder: Identifiable {
-  let id = UUID()
+struct Reminder: Identifiable, Codable {
+  @DocumentID
+  var id: String?
   var title: String
   var isCompleted = false
+
+  var userId: String? = nil
 }
+
+extension Reminder {
+  static let collectionName = "reminders"
+}
+
 extension Reminder {
   static let samples = [
     Reminder(title: "Build sample app", isCompleted: true),
@@ -21,4 +29,3 @@ extension Reminder {
     Reminder(title: "PROFIT!"),
   ]
 }
-

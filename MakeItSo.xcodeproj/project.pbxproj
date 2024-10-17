@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		84C79BA42CAEBF920062A572 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 84C79BA32CAEBF920062A572 /* FirebaseAnalytics */; };
+		84C79BA62CAEBF920062A572 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 84C79BA52CAEBF920062A572 /* FirebaseAnalyticsSwift */; };
+		84C79BA82CAEBF920062A572 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84C79BA72CAEBF920062A572 /* FirebaseAuth */; };
+		84C79BAA2CAEBF920062A572 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84C79BA92CAEBF920062A572 /* FirebaseFirestore */; };
+		84C79BAC2CAEBF920062A572 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 84C79BAB2CAEBF920062A572 /* FirebaseFirestoreSwift */; };
+		9B6E36C62CBED86300385604 /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 9B6E36C52CBED86300385604 /* Crypto */; };
+		9B6E36C82CBED86300385604 /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 9B6E36C72CBED86300385604 /* _CryptoExtras */; };
+		9BF52AF42CB0455000C8C1D2 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 9BF52AF32CB0455000C8C1D2 /* Factory */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		84C79B5E2CAD43C30062A572 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +63,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C79BAC2CAEBF920062A572 /* FirebaseFirestoreSwift in Frameworks */,
+				84C79BA62CAEBF920062A572 /* FirebaseAnalyticsSwift in Frameworks */,
+				84C79BAA2CAEBF920062A572 /* FirebaseFirestore in Frameworks */,
+				9BF52AF42CB0455000C8C1D2 /* Factory in Frameworks */,
+				9B6E36C82CBED86300385604 /* _CryptoExtras in Frameworks */,
+				84C79BA82CAEBF920062A572 /* FirebaseAuth in Frameworks */,
+				9B6E36C62CBED86300385604 /* Crypto in Frameworks */,
+				84C79BA42CAEBF920062A572 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +94,10 @@
 		84C79B432CAD43C20062A572 = {
 			isa = PBXGroup;
 			children = (
-				84C79B4E2CAD43C20062A572 /* MakeItSo */,
 				84C79B602CAD43C30062A572 /* MakeItSoTests */,
 				84C79B6A2CAD43C30062A572 /* MakeItSoUITests */,
 				84C79B4D2CAD43C20062A572 /* Products */,
+				84C79B4E2CAD43C20062A572 /* MakeItSo */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +131,14 @@
 			);
 			name = MakeItSo;
 			packageProductDependencies = (
+				84C79BA32CAEBF920062A572 /* FirebaseAnalytics */,
+				84C79BA52CAEBF920062A572 /* FirebaseAnalyticsSwift */,
+				84C79BA72CAEBF920062A572 /* FirebaseAuth */,
+				84C79BA92CAEBF920062A572 /* FirebaseFirestore */,
+				84C79BAB2CAEBF920062A572 /* FirebaseFirestoreSwift */,
+				9BF52AF32CB0455000C8C1D2 /* Factory */,
+				9B6E36C52CBED86300385604 /* Crypto */,
+				9B6E36C72CBED86300385604 /* _CryptoExtras */,
 			);
 			productName = MakeItSo;
 			productReference = 84C79B4C2CAD43C20062A572 /* MakeItSo.app */;
@@ -195,6 +222,11 @@
 			);
 			mainGroup = 84C79B432CAD43C20062A572;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				84C79BA22CAEBF920062A572 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9BF52AF22CB0455000C8C1D2 /* XCRemoteSwiftPackageReference "Factory" */,
+				9B6E36C42CBED86300385604 /* XCRemoteSwiftPackageReference "swift-crypto" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84C79B4D2CAD43C20062A572 /* Products */;
 			projectDirPath = "";
@@ -412,10 +444,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MakeItSo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -449,10 +482,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MakeItSo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -583,6 +617,76 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84C79BA22CAEBF920062A572 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.9.0;
+			};
+		};
+		9B6E36C42CBED86300385604 /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.1;
+			};
+		};
+		9BF52AF22CB0455000C8C1D2 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84C79BA32CAEBF920062A572 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C79BA22CAEBF920062A572 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		84C79BA52CAEBF920062A572 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C79BA22CAEBF920062A572 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		84C79BA72CAEBF920062A572 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C79BA22CAEBF920062A572 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		84C79BA92CAEBF920062A572 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C79BA22CAEBF920062A572 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		84C79BAB2CAEBF920062A572 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C79BA22CAEBF920062A572 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		9B6E36C52CBED86300385604 /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B6E36C42CBED86300385604 /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+		9B6E36C72CBED86300385604 /* _CryptoExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B6E36C42CBED86300385604 /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = _CryptoExtras;
+		};
+		9BF52AF32CB0455000C8C1D2 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BF52AF22CB0455000C8C1D2 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84C79B442CAD43C20062A572 /* Project object */;
 }

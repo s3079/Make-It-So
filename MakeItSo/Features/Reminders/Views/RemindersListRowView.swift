@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct RemindersListRowView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @Binding
+  var reminder: Reminder
+
+  var body: some View {
+    HStack {
+      Toggle(isOn: $reminder.isCompleted) { /* no label, on purpose */}
+        .toggleStyle(.reminder)
+      Text(reminder.title)
+      Spacer()
     }
+    .contentShape(Rectangle())
+  }
 }
 
-#Preview {
-    RemindersListRowView()
+struct RemindersListRowView_Previews: PreviewProvider {
+  struct Container: View {
+    @State var reminder = Reminder.samples[0]
+    var body: some View {
+      List {
+        RemindersListRowView(reminder: $reminder)
+      }
+    }
+  }
+
+  static var previews: some View {
+    NavigationStack {
+      Container()
+        .listStyle(.plain)
+        .navigationTitle("Reminder")
+    }
+  }
 }
+
